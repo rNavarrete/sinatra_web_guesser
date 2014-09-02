@@ -1,6 +1,11 @@
 require 'sinatra'
 
+configure do
+  enable :sessions
+end
+
 get '/' do
-  "Hello, World!"
+  session["number"] ||= rand(101)
+  "Your secret number is #{session["number"]}!!"
 end
 
