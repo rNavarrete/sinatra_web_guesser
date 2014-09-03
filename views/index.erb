@@ -1,6 +1,22 @@
+
 <html>
-  <head></head>
-  <body>
+  <head>
+    <style>
+
+    #red{
+      background: red;
+    }
+
+    #white{
+      background: white;
+    }
+
+    #green{
+      background: green;
+    }
+    </style>
+  </head>
+  <body id=<%=id%>>
     <h4><%= message %></h4>
     <p>The Secret Number is <%= session["number"] %></p>
   </body>
