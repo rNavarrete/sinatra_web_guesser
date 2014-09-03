@@ -7,6 +7,6 @@ end
 
 get '/' do
   session["number"] ||= rand(101)
-  "Your secret number is #{session["number"]}!!"
+  erb :index #, :locals => {(session["number"]).to_sym => number}
 end
 
